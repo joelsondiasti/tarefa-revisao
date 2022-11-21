@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,22 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>GitHub Card Maker</title>
   </head>
-  <body class="bg-gray-100 h-screen flex w-full">
+  <body class="bg-gray-700 h-screen flex w-full">
     <div class="grid grid-row-2 w-4/6 self-center mx-auto gap-4">
       <div class="flex items-center justify-center gap-4">
         <input
           type="text"
           name="name"
-          class="w-full p-2 border border-gray-300  rounded-md"
+          id="name"
+          class="w-full p-2 border border-gray-300 rounded-md"
           placeholder="Nome de usuário"
         />
-        <button class="p-2 border bg-green-600 text-white hover:bg-green-500 transition-all rounded-md">Criar</button>
+        <button
+          class="p-2 border bg-green-600 text-white hover:bg-green-500 transition-all rounded-md"
+          id="btnCriar"
+        >
+          Criar
+        </button>
       </div>
       <div class="px-6 bg-white mt-20">
         <div class="flex flex-wrap justify-center">
           <div class="w-full flex justify-center">
             <div class="relative">
               <img
+                id="userPhoto"
                 src="https://github.com/creativetimofficial/soft-ui-dashboard-tailwind/blob/main/build/assets/img/team-2.jpg?raw=true"
                 class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
               />
@@ -31,23 +37,32 @@
           </div>
         </div>
         <div class="text-center mt-24">
-          <h3 class="text-2xl text-slate-700 font-bold leading-normal mb-1">
+          <h3
+            id="userName"
+            class="text-2xl text-slate-700 font-bold leading-normal mb-1"
+          >
             Mike Thompson
           </h3>
-          <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-            <i class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i
-            >Paris, France
+          <div
+            id="userLocation"
+            class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase"
+          >
+            Paris, France
           </div>
         </div>
         <div class="mt-6 py-6 border-t border-slate-200 text-center">
           <div class="flex flex-wrap justify-center">
             <div class="w-full px-4">
-              <p class="font-light leading-relaxed text-slate-600 mb-4">
+              <p
+                id="userBio"
+                class="font-light leading-relaxed text-slate-600 mb-4"
+              >
                 An artist of considerable range, Mike is the name taken by
                 Melbourne-raised, Brooklyn-based Nick Murphy writes, performs
                 and records all of his own music, giving it a warm.
               </p>
               <a
+                id="userLink"
                 class="font-normal text-slate-700 hover:text-slate-400"
                 >Abrir Perfil</a
               >
@@ -56,5 +71,6 @@
         </div>
       </div>
     </div>
+    <script src="functions.js"></script>
   </body>
 </html>
